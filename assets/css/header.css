@@ -1,0 +1,27 @@
+.Rectangle1 {
+    border: 1px solid #646464;
+    width: 100%;
+    height: 50px;
+    background: #181818;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.Inicio {
+    padding-left: 20px;
+    color: white;
+    font-size: 15px;
+    margin-right: auto;
+    text-decoration: none;
+}
+
+.Manga,
+.Anime {
+    padding-right: 20px;
+    color: white;
+    font-size: 15px;
+    word-wrap: break-word;
+    text-decoration: none;
+}

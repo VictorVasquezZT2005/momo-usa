@@ -1,0 +1,249 @@
+body {
+    background-color: #181818;
+    font-family: "Poetsen One", sans-serif;
+    margin: 10px;
+}
+
+a {
+    text-decoration: none; /* Quitar subrayado */
+    color: white; /* Cambiar color del texto */
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.banner {
+    border: 1px solid #646464;
+    width: 700px;
+    height: 400px;
+    margin-bottom: 5px;
+}
+
+.devs {
+    margin-left: 10px;
+    color: white;
+    align-self: flex-start;
+    margin-bottom: 5px;
+}
+
+.dev {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    border: 1px solid #646464;
+    width: 587px;
+    height: 80px;
+}
+
+.image-profile {
+    border-radius: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 70px;
+    height: 70px;
+}
+
+.name {
+    margin-right: 10px;
+}
+
+.des {
+    color: white;
+    border: 1px solid #646464;
+    width: 100%;
+    height: 90px;
+    margin-bottom: 10px;
+}
+
+.desc {
+    margin: 5px;
+}
+
+.title-anime {
+    text-align: left;
+}
+
+.search-bar {
+    margin-bottom: 10px;
+}
+
+/* Estilo para el campo de entrada de texto */
+#searchInput {
+    padding: 10px;
+    width: 200px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.buscar {
+    color: white;
+    border: 1px solid #646464;
+    background-color: #181818;
+    width: 80px;
+    height: 41px;
+}
+
+.animes {
+    text-align: center;
+    color: white;
+    align-self: flex-start;
+    margin-bottom: 5px;
+}
+
+.anime {
+    align-items: center;
+    margin-bottom: 5px;
+    border: 1px solid #646464;
+    width: 250px;
+    height: 300px;
+}
+
+.anime-image {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 200px;
+    height: 250px;
+}
+
+.temp {
+    text-align: center;
+    color: white;
+    align-self: flex-start;
+    margin-bottom: 5px;
+}
+
+.caps-container {
+    display: flex;
+    justify-content: space-between; /* Para distribuir los elementos de manera equitativa */
+}
+
+.cap {
+    position: relative;
+    align-items: center;
+    border: 1px solid #646464;
+    width: 250px;
+    height: 280px;
+    margin-right: 5px; /* Agregar margen a la derecha de cada elemento */
+}
+
+.cap:last-child {
+    margin-right: 0; /* Eliminar el margen del último elemento */
+}
+
+.player-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.mini-player {
+    width: 100%;
+    height: 100%;
+}
+
+.title-temp {
+    text-align: left;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .banner {
+        width: 100%;
+        max-width: 700px;
+        height: auto;
+    }
+
+    .dev {
+        width: 100%;
+        max-width: 620px;
+        height: auto;
+        padding: 10px;
+        box-sizing: border-box;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .animes {
+        margin-left: 10px;
+        color: white;
+        align-self: flex-start;
+        margin-bottom: 5px;
+    }
+
+    .anime {
+        width: 100%;
+        max-width: 620px;
+        height: auto;
+        padding: 10px;
+        box-sizing: border-box;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .image-profile {
+        margin-bottom: 10px;
+        margin-left: 0;
+        margin-right: 0;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+    }
+    
+    .name {
+        margin-right: 0;
+    }
+
+    .desc {
+        font-size: 9px;
+    }
+
+    .caps-container {
+        display: flex;
+        justify-content: space-between; /* Para distribuir los elementos de manera equitativa */
+    }
+    
+    .cap {
+        position: relative;
+        align-items: center;
+        border: 1px solid #646464;
+        width: 150px;
+        height: 200px;
+        margin-right: 5px; /* Agregar margen a la derecha de cada elemento */
+    }
+    
+    .cap:last-child {
+        margin-right: 0; /* Eliminar el margen del último elemento */
+    }
+    
+    .player-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .mini-player {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .dev {
+        width: 100%;
+        height: auto;
+    }
+}

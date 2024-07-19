@@ -19,6 +19,7 @@ a {
     width: 700px;
     height: 400px;
     margin-bottom: 5px;
+    border-radius: 10px; /* Bordes redondeados */
 }
 
 .devs {
@@ -35,6 +36,7 @@ a {
     border: 1px solid #646464;
     width: 587px;
     height: 80px;
+    border-radius: 10px; /* Bordes redondeados */
 }
 
 .image-profile {
@@ -55,6 +57,7 @@ a {
     width: 100%;
     height: 90px;
     margin-bottom: 10px;
+    border-radius: 10px; /* Bordes redondeados */
 }
 
 .desc {
@@ -75,6 +78,7 @@ a {
     width: 200px;
     border: 1px solid #ccc;
     font-size: 16px;
+    border-radius: 5px; /* Bordes redondeados */
 }
 
 .buscar {
@@ -83,6 +87,7 @@ a {
     background-color: #181818;
     width: 80px;
     height: 41px;
+    border-radius: 5px; /* Bordes redondeados */
 }
 
 .animes {
@@ -98,6 +103,7 @@ a {
     border: 1px solid #646464;
     width: 250px;
     height: 300px;
+    border-radius: 10px; /* Bordes redondeados */
 }
 
 .anime-image {
@@ -106,6 +112,7 @@ a {
     margin-right: 10px;
     width: 200px;
     height: 250px;
+    border-radius: 10px; /* Bordes redondeados */
 }
 
 .temp {
@@ -118,15 +125,18 @@ a {
 .caps-container {
     display: flex;
     justify-content: space-between; /* Para distribuir los elementos de manera equitativa */
+    flex-wrap: wrap; /* Asegura que los elementos se envuelvan en pantallas pequeñas */
 }
 
 .cap {
     position: relative;
     align-items: center;
-    border: 1px solid #646464;
+    border: none; /* Eliminar borde gris */
     width: 250px;
-    height: 280px;
+    height: 300px; /* Aumenta la altura para acomodar el texto */
     margin-right: 5px; /* Agregar margen a la derecha de cada elemento */
+    border-radius: 10px; /* Bordes redondeados */
+    margin-bottom: 20px; /* Espacio adicional en la parte inferior */
 }
 
 .cap:last-child {
@@ -134,16 +144,22 @@ a {
 }
 
 .player-container {
-    position: absolute;
-    top: 0;
-    left: 0;
+    width: 100%;
+    height: calc(100% - 40px); /* Reduce la altura disponible para el video */
+    padding: 10px; /* Asegura que el video no toque los bordes del contenedor */
+}
+
+iframe {
     width: 100%;
     height: 100%;
+    border: none; /* Eliminar borde */
+    border-radius: 10px; /* Bordes redondeados */
 }
 
 .mini-player {
     width: 100%;
     height: 100%;
+    border-radius: 10px; /* Bordes redondeados */
 }
 
 .title-temp {
@@ -161,6 +177,7 @@ a {
         width: 100%;
         max-width: 700px;
         height: auto;
+        border-radius: 10px; /* Bordes redondeados */
     }
 
     .dev {
@@ -172,6 +189,7 @@ a {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        border-radius: 10px; /* Bordes redondeados */
     }
 
     .animes {
@@ -190,6 +208,7 @@ a {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        border-radius: 10px; /* Bordes redondeados */
     }
     
     .image-profile {
@@ -198,7 +217,7 @@ a {
         margin-right: 0;
         width: 70px;
         height: 70px;
-        border-radius: 50%;
+        border-radius: 50%; /* Bordes redondeados */
     }
     
     .name {
@@ -211,16 +230,19 @@ a {
 
     .caps-container {
         display: flex;
-        justify-content: space-between; /* Para distribuir los elementos de manera equitativa */
+        flex-wrap: wrap; /* Asegura que los elementos se envuelvan en pantallas pequeñas */
+        justify-content: center; /* Centra los elementos */
     }
     
     .cap {
         position: relative;
         align-items: center;
-        border: 1px solid #646464;
+        border: none; /* Eliminar borde gris */
         width: 150px;
-        height: 200px;
+        height: 250px; /* Aumenta la altura para acomodar el texto */
         margin-right: 5px; /* Agregar margen a la derecha de cada elemento */
+        border-radius: 10px; /* Bordes redondeados */
+        margin-bottom: 20px; /* Espacio adicional en la parte inferior */
     }
     
     .cap:last-child {
@@ -228,16 +250,15 @@ a {
     }
     
     .player-container {
-        position: absolute;
-        top: 0;
-        left: 0;
         width: 100%;
-        height: 100%;
+        height: calc(100% - 30px); /* Reduce la altura disponible para el video */
+        padding: 5px; /* Asegura que el video no toque los bordes del contenedor */
     }
     
     .mini-player {
         width: 100%;
         height: 100%;
+        border-radius: 10px; /* Bordes redondeados */
     }
 }
 
@@ -245,5 +266,6 @@ a {
     .dev {
         width: 100%;
         height: auto;
+        border-radius: 10px; /* Bordes redondeados */
     }
 }

@@ -7,6 +7,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    border-radius: 10px; /* Bordes redondeados */
 }
 
 .autor {
@@ -20,4 +21,5 @@
 .red {
     margin-right: 20px;
     color: white;
+    border-radius: 5px; /* Bordes redondeados */
 }

@@ -1,5 +1,4 @@
 .Rectangle2 {
-    margin-top: 50px;
     color: white;
     border: 1px solid #646464;
     width: 100%;
@@ -8,6 +7,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    margin-top: 10px;
     border-radius: 10px; /* Bordes redondeados */
 }
 

@@ -136,6 +136,9 @@ a {
     height: 280px;
     margin-right: 5px; /* Agregar margen a la derecha de cada elemento */
     border-radius: 10px; /* Bordes redondeados */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .cap:last-child {
@@ -183,6 +186,12 @@ iframe {
 
 .title-temp {
     text-align: left;
+}
+
+.cap .name {
+    font-weight: bold;
+    padding: 5px;
+    text-align: center;
 }
 
 /* Media Queries for responsiveness */

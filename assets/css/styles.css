@@ -131,12 +131,11 @@ a {
 .cap {
     position: relative;
     align-items: center;
-    border: none; /* Eliminar borde gris */
+    border: 1px solid #646464;
     width: 250px;
-    height: 300px; /* Aumenta la altura para acomodar el texto */
+    height: 280px;
     margin-right: 5px; /* Agregar margen a la derecha de cada elemento */
     border-radius: 10px; /* Bordes redondeados */
-    margin-bottom: 20px; /* Espacio adicional en la parte inferior */
 }
 
 .cap:last-child {
@@ -144,9 +143,9 @@ a {
 }
 
 .player-container {
+    position: relative;
     width: 100%;
-    height: calc(100% - 40px); /* Reduce la altura disponible para el video */
-    padding: 10px; /* Asegura que el video no toque los bordes del contenedor */
+    height: 100%;
 }
 
 iframe {
@@ -159,7 +158,27 @@ iframe {
 .mini-player {
     width: 100%;
     height: 100%;
-    border-radius: 10px; /* Bordes redondeados */
+}
+
+.fullscreen-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #007bff; /* Color de fondo azul */
+    color: white;
+    border: 1px solid #0056b3; /* Borde azul oscuro */
+    padding: 10px 20px;
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s, border-color 0.3s; /* Transiciones suaves */
+    z-index: 1000; /* Asegura que el botón esté sobre el iframe */
+}
+
+.fullscreen-button:hover {
+    background-color: #0056b3; /* Color de fondo azul oscuro al pasar el mouse */
+    border-color: #004494; /* Borde azul más oscuro al pasar el mouse */
 }
 
 .title-temp {
@@ -237,12 +256,11 @@ iframe {
     .cap {
         position: relative;
         align-items: center;
-        border: none; /* Eliminar borde gris */
+        border: 1px solid #646464;
         width: 150px;
-        height: 250px; /* Aumenta la altura para acomodar el texto */
+        height: 200px;
         margin-right: 5px; /* Agregar margen a la derecha de cada elemento */
         border-radius: 10px; /* Bordes redondeados */
-        margin-bottom: 20px; /* Espacio adicional en la parte inferior */
     }
     
     .cap:last-child {
@@ -250,15 +268,14 @@ iframe {
     }
     
     .player-container {
+        position: relative;
         width: 100%;
-        height: calc(100% - 30px); /* Reduce la altura disponible para el video */
-        padding: 5px; /* Asegura que el video no toque los bordes del contenedor */
+        height: 100%;
     }
     
     .mini-player {
         width: 100%;
         height: 100%;
-        border-radius: 10px; /* Bordes redondeados */
     }
 }
 

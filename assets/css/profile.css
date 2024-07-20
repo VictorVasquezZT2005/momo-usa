@@ -1,0 +1,116 @@
+/* Estilos Generales */
+body {
+    background-color: #181818;
+    font-family: 'Poetsen One', sans-serif;
+    margin: 0;
+    padding: 10px;
+    color: white;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Encabezado del perfil */
+.profile-header {
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.username {
+    margin: 10px 0;
+    font-size: 24px;
+    color: #ffffff; /* Color de texto blanco */
+}
+
+/* Contenedor de Acciones */
+.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.actions button {
+    flex: 1;
+    margin: 0 5px;
+    height: 40px;
+}
+
+/* Estilos de Botones */
+button {
+    background-color: #007bff; /* Color de fondo azul */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3; /* Azul oscuro en hover */
+}
+
+button#logout {
+    background-color: #ff4c4c;
+}
+
+button#logout:hover {
+    background-color: #cc0000; /* Rojo oscuro en hover */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .actions {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .actions button {
+        margin: 10px 0; /* Agrega margen superior e inferior a los botones */
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-pic {
+        width: 80px;
+        height: 80px;
+    }
+
+    .username {
+        font-size: 20px;
+    }
+
+    .actions button {
+        width: 100%;
+        max-width: 300px;
+        height: 50px;
+        font-size: 14px;
+        margin: 10px 0; /* Agrega margen superior e inferior a los botones */
+    }
+}

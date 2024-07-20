@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario</title>
+    <link rel="stylesheet" href="/assets/css/profile.css">
+    <script src="/assets/js/header.js" defer></script>
+    <script src="/assets/js/footer.js" defer></script>
+    <script src="/assets/js/logout.js" defer></script>
+    <script src="/assets/js/profile.js" defer></script> <!-- Script para cargar el perfil -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="header-container"></div>
+    <div class="container">
+        <div class="profile-header">
+            <img id="profile-pic" src="default-profile-pic.jpg" alt="Foto de perfil" class="profile-pic">
+            <h1 class="username">Nombre de Usuario</h1>
+        </div>
+        <div class="actions">
+            <button id="logout">Cerrar sesión</button>
+            <button id="donate" onclick="window.open('https://www.paypal.com/donate/?hosted_button_id=BTY9XJDBWQCTU', '_blank')">Donar con PayPal <i class="fa-brands fa-paypal"></i></button>
+        </div>
+    </div>
+    <div id="footer-container"></div>
+</body>
+</html>

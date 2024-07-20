@@ -24,8 +24,6 @@ a {
     white-space: nowrap;
     animation: scroll 15s linear infinite; /* Anima el carrusel */
     border-radius: 10px;
-    border: 1px solid #646464;
-    margin-bottom: 5px;
 }
 
 /* Estilo para ocultar la barra de desplazamiento */
@@ -41,12 +39,10 @@ a {
 .carousel img {
     flex: 0 0 auto;
     width: 700px;
-    height: 400px;
+    height: 565px;
     scroll-snap-align: center;
     object-fit: cover;
     border-radius: 10px;
-    border: 1px solid #646464;
-    margin-bottom: 5px;
 }
 
 .devs {
@@ -60,7 +56,6 @@ a {
     display: flex;
     align-items: center;
     margin-bottom: 5px;
-    border: 1px solid #646464;
     width: 587px;
     height: 80px;
     border-radius: 10px; /* Bordes redondeados */
@@ -76,19 +71,6 @@ a {
 
 .name {
     margin-right: 10px;
-}
-
-.des {
-    color: white;
-    border: 1px solid #646464;
-    width: 100%;
-    height: 90px;
-    margin-bottom: 10px;
-    border-radius: 10px; /* Bordes redondeados */
-}
-
-.desc {
-    margin: 5px;
 }
 
 .title-anime {
@@ -110,7 +92,6 @@ a {
 
 .buscar {
     color: white;
-    border: 1px solid #646464;
     background-color: #181818;
     width: 80px;
     height: 41px;
@@ -127,7 +108,6 @@ a {
 .anime {
     align-items: center;
     margin-bottom: 5px;
-    border: 1px solid #646464;
     width: 250px;
     height: 300px;
     border-radius: 10px; /* Bordes redondeados */
@@ -158,7 +138,6 @@ a {
 .cap {
     position: relative;
     align-items: center;
-    border: 1px solid #646464;
     width: 250px;
     height: 280px;
     margin-right: 5px; /* Agregar margen a la derecha de cada elemento */
@@ -271,7 +250,6 @@ iframe {
     display: flex;
     justify-content: space-between; /* Distribuye el espacio entre los botones */
     align-items: center;
-    border: 1px solid #646464;
     width: 587px;
     height: 100%; /* Rellenar el contenedor completamente */
     border-radius: 10px; /* Bordes redondeados */
@@ -347,10 +325,6 @@ iframe {
         margin-right: 0;
     }
 
-    .desc {
-        font-size: 9px;
-    }
-
     .caps-container {
         display: flex;
         flex-wrap: wrap; /* Asegura que los elementos se envuelvan en pantallas pequeñas */
@@ -360,7 +334,6 @@ iframe {
     .cap {
         position: relative;
         align-items: center;
-        border: 1px solid #646464;
         width: 150px;
         height: 200px;
         margin-right: 5px; /* Agregar margen a la derecha de cada elemento */

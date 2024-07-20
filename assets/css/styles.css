@@ -10,16 +10,43 @@ a {
 }
 
 .container {
+    overflow: hidden;
     display: flex;
     align-items: center;
 }
 
-.banner {
+.carousel {
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    animation: scroll 15s linear infinite; /* Anima el carrusel */
+    border-radius: 10px;
     border: 1px solid #646464;
+    margin-bottom: 5px;
+}
+
+/* Estilo para ocultar la barra de desplazamiento */
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.carousel img {
+    flex: 0 0 auto;
     width: 700px;
     height: 400px;
+    scroll-snap-align: center;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid #646464;
     margin-bottom: 5px;
-    border-radius: 10px; /* Bordes redondeados */
 }
 
 .devs {
@@ -264,11 +291,16 @@ iframe {
         justify-content: center;
     }
 
-    .banner {
+    .carousel {
         width: 100%;
         max-width: 700px;
-        height: auto;
+        height: 201px;
         border-radius: 10px; /* Bordes redondeados */
+    }
+
+    .carousel img {
+        width: 100%;
+        height: auto; /* Ajusta la altura automáticamente para mantener las proporciones */
     }
 
     .dev {

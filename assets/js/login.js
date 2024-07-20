@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', function() {
   
       // Aquí puedes definir tus credenciales de prueba
       const validUsername = 'VictorZT2005';
-      const validUsername = 'vvasquezdv2016@icloud.com';
       const validPassword = 'EDM2005yt';
   
       if (username === validUsername && password === validPassword) {

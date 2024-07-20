@@ -357,4 +357,46 @@ iframe {
         height: auto;
         border-radius: 10px; /* Bordes redondeados */
     }
+
+    .actions {
+        width: 100%;
+        height: auto;
+        border-radius: 10px; /* Bordes redondeados */
+        display: flex; /* Asegura que los botones se alineen en columna */
+        flex-direction: column; /* Disposición en columna */
+        align-items: center; /* Centra los botones horizontalmente */
+        gap: 10px; /* Espacio entre los botones */
+    }
+
+    #logout, #donate {
+        width: 100%;
+        max-width: 300px; /* Ancho máximo para mantener el diseño proporcional */
+        height: 50px; /* Altura uniforme */
+        border-radius: 10px; /* Bordes redondeados */
+        font-size: 16px; /* Tamaño de fuente uniforme */
+        display: block; /* Asegura que los botones se comporten como bloques */
+        text-align: center; /* Centra el texto dentro del botón */
+    }
+
+    #logout {
+        background-color: #ff4c4c; /* Rojo llamativo para el botón */
+        color: white; /* Texto blanco */
+        border: 1px solid #cc0000; /* Borde rojo oscuro */
+    }
+
+    #logout:hover {
+        background-color: #cc0000; /* Rojo oscuro al pasar el mouse */
+        border-color: #990000; /* Borde rojo más oscuro al pasar el mouse */
+    }
+
+    #donate {
+        background-color: #007bff; /* Azul claro para el botón */
+        color: white; /* Texto blanco */
+        border: 1px solid #0056b3; /* Borde azul oscuro */
+    }
+
+    #donate:hover {
+        background-color: #0056b3; /* Azul oscuro al pasar el mouse */
+        border-color: #004494; /* Borde azul más oscuro al pasar el mouse */
+    }
 }

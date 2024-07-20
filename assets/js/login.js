@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       if (users[username] && users[username] === password) {
           localStorage.setItem('loggedIn', 'true');
-          window.location.href = 'index.html';
+          window.location.href = '/pages/index.html';
       } else {
           document.getElementById('message').style.color = 'red';
           document.getElementById('message').textContent = 'Usuario o contraseña incorrectos';

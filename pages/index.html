@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Momo Usa</title>
+    <title>Momo USA</title>
     <!-- CSS -->
     <link rel="stylesheet" href="/assets/css/styles.css">
     <!-- JavaScript -->
-    <script src="/assets/js/header.js"></script>
-    <script src="/assets/js/footer.js"></script>
+    <script src="/assets/js/header.js" defer></script>
+    <script src="/assets/js/footer.js" defer></script>
+    <script src="/assets/js/logout.js" defer></script>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div id="header-container"></div>
     <div class="container">
@@ -32,12 +35,19 @@
                 <img class="image-profile" src="/assets/img/rosita-rivera.jpg">
                 <p class="name">Rosita Rivera >> Diseñadora</p>
             </div>
+            <div class="title">
+                <p>Acciones</p>
+            </div>
+            <div class="actions">
+                <button id="donate" onclick="window.open('https://www.paypal.com/donate/?hosted_button_id=BTY9XJDBWQCTU', '_blank')">Donar con PayPal</button>
+                <button id="logout">Cerrar Sesión</button>
+            </div>
         </div>
     </div>
     <div class="des">
-        <p class="desc">Descripcion : Momo USA es una página web dedicada al anime y manga. Ofrece resúmenes, reseñas y análisis de series populares, además de noticias y actualizaciones del mundo del anime y manga. Su contenido, presentado de manera atractiva y accesible, incluye artículos bien elaborados con imágenes y gráficos relevantes. Momo USA fomenta la interacción con su comunidad y ha cultivado una base de seguidores leales. Es un recurso valioso para fans que buscan contenido de calidad y recomendaciones de nuevas series.</p>
-    </div>
+        <p class="desc">Descripción: Momo USA es una página web dedicada al anime y manga. Ofrece resúmenes, reseñas y análisis de series populares, además de noticias y actualizaciones del mundo del anime y manga. Su contenido, presentado de manera atractiva y accesible, incluye artículos bien elaborados con imágenes y gráficos relevantes. Momo USA fomenta la interacción con su comunidad y ha cultivado una base de seguidores leales. Es un recurso valioso para fans que buscan contenido de calidad y recomendaciones de nuevas series.</p>
     </div>
     <div id="footer-container"></div>
 </body>
+
 </html>

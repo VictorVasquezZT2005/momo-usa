@@ -11,19 +11,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const username = document.getElementById('username').value;
         const password = document.getElementById('password').value;
 
-        // Definir usuarios y contraseñas en un objeto
-        const users = {
-            'VictorZT2005': {
-                password: 'EDM2005yt',
-                image: '/assets/img/victor-vasquez.jpg' // Ruta a la imagen del usuario
-            },
-            'Rosita2024': {
-                password: 'rositarivera2024',
-                image: '/assets/img/rosita-rivera.jpg' // Ruta a la imagen del usuario
-            },
-            // Puedes agregar más usuarios aquí
-        };
-
         // Verifica si el usuario y la contraseña son correctos
         if (users[username] && users[username].password === password) {
             // Guarda la información en localStorage
@@ -37,5 +24,10 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('message').style.color = 'red';
             document.getElementById('message').textContent = 'Usuario o contraseña incorrectos';
         }
+    });
+
+    // Maneja la redirección al registro
+    document.getElementById('register-button').addEventListener('click', function() {
+        window.location.href = '/pages/register.html';
     });
 });

@@ -1,36 +1,15 @@
 {
   "version": 2,
-  "public": true,
   "builds": [
     {
-      "src": "pages/**/*.html",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "assets/**/*",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "partials/**/*.html",
-      "use": "@vercel/static"
+      "src": "app.py",
+      "use": "@vercel/python"
     }
   ],
   "routes": [
     {
-      "src": "/",
-      "dest": "/pages/index.html"
-    },
-    {
-      "src": "/assets/(.*)",
-      "dest": "/assets/$1"
-    },
-    {
-      "src": "/partials/(.*)",
-      "dest": "/partials/$1"
-    },
-    {
       "src": "/(.*)",
-      "dest": "/pages/$1"
+      "dest": "app.py"
     }
   ]
 }

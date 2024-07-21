@@ -21,7 +21,7 @@ def login():
         if user and check_password_hash(user.password, password):
             return redirect(url_for('index'))
         return 'Nombre de usuario o contraseña incorrectos'
-    return render_template('registration/login.html')
+    return render_template('pages/login.html')
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
@@ -36,7 +36,7 @@ def register():
             db.session.commit()
             return redirect(url_for('login'))
         return 'Las contraseñas no coinciden'
-    return render_template('registration/register.html')
+    return render_template('pages/register.html')
 
 @app.route('/index')
 def index():

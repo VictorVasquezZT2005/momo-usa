@@ -13,7 +13,6 @@
     <!-- JavaScript -->
     <script src="/static/js/header.js" defer></script>
     <script src="/static/js/footer.js" defer></script>
-    <script src="/static/js/logout.js" defer></script>
     <script src="/static/js/profile.js" defer></script>
     <!-- Script para cargar el perfil -->
     <!-- Fonts -->
@@ -22,6 +21,17 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
   </head>
   <body>
@@ -37,7 +47,9 @@
         <h1 class="username">Nombre de Usuario</h1>
       </div>
       <div class="actions">
-        <button id="logout">Cerrar sesión</button>
+        <form id="logout-form" action="/logout" method="POST">
+          <button type="submit" id="logout">Cerrar sesión</button>
+        </form>
         <button
           id="donate"
           onclick="window.open('https://www.paypal.com/donate/?hosted_button_id=BTY9XJDBWQCTU', '_blank')"

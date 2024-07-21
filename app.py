@@ -1,4 +1,4 @@
-from flask import Flask, request, redirect, url_for, render_template
+from flask import Flask, request, redirect, url_for, render_template, make_response
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
 
@@ -19,7 +19,9 @@ def login():
         password = request.form['password']
         user = User.query.filter_by(username=username).first()
         if user and check_password_hash(user.password, password):
-            return redirect(url_for('index'))
+            resp = make_response(redirect(url_for('index')))
+            resp.set_cookie('session', 'active')  # Puedes ajustar el valor de la cookie según sea necesario
+            return resp
         return 'Nombre de usuario o contraseña incorrectos'
     return render_template('pages/login.html')
 
@@ -57,6 +59,12 @@ def anime():
 @app.route('/profile')
 def profile():
     return render_template('pages/profile.html')
+
+@app.route('/logout', methods=['POST'])
+def logout():
+    resp = make_response(redirect('/login'))
+    resp.set_cookie('session', '', expires=0)  # Elimina la cookie de sesión
+    return resp
 
 if __name__ == '__main__':
     with app.app_context():

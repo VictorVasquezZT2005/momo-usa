@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/search.css">
+    <!-- Icono de la página -->
+    <link rel="icon" href="/assets/icon/icon.ico" type="image/x-icon">
+    <!-- JavaScript -->
+    <script type="module" src="/assets/js/animes.js"></script>
+    <script type="module" src="/assets/js/mangas.js"></script>
+    <script type="module" src="/assets/js/search.js"></script>
+    <script src="/assets/js/header.js" defer></script>
+    <script src="/assets/js/footer.js" defer></script>
+    <script src="/assets/js/logout.js" defer></script>
+    <script src="/assets/js/profile.js" defer></script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <div id="header-container"></div>
+
+    <div class="container">
+        <!-- Barra de búsqueda -->
+        <div class="search-container">
+            <input type="text" class="search-bar" placeholder="Buscar...">
+            <button class="search-button"><span class="material-symbols-outlined">search</span></button>
+        </div>
+        <div class="search-results">
+            <h2>Animes</h2>
+            <div class="anime-results"></div> <!-- Contenedor para resultados de animes -->
+            <h2>Mangas</h2>
+            <div class="manga-results"></div> <!-- Contenedor para resultados de mangas -->
+        </div>
+    </div>
+
+    <div id="footer-container"></div>
+</body>
+</html>

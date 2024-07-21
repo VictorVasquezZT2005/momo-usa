@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Momo Usa</title>
     <!-- CSS -->
-    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/anime.css">
+    <!-- Icono de la página -->
+    <link rel="icon" href="/assets/icon/icon.ico" type="image/x-icon">
     <!-- JavaScript -->
-    <script src="/assets/js/header.js"></script>
-    <script src="/assets/js/footer.js"></script>
-    <script src="/assets/js/search-anime.js"></script>
+    <script src="/assets/js/header.js" defer></script>
+    <script src="/assets/js/footer.js" defer></script>
+    <script src="/assets/js/animes.js" type="module" defer></script>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,25 +19,15 @@
 </head>
 <body>
     <div id="header-container"></div>
+
     <div class="container">
         <div class="animes">
-            <div class="title-anime">
-                <p>Animes</p>
+            <div class="anime-list">
+                <!-- Los elementos anime se generarán dinámicamente con JavaScript -->
             </div>
-            <div class="search-bar">
-                <input type="text" id="searchInput" placeholder="Buscar anime...">
-                <button class="buscar" onclick="searchAnime()">Buscar</button>
-            </div>
-            <a href="/pages/kimetsu-no-yaiba.html">
-                <div class="anime">
-                    <img class="anime-image" src="/assets/img/kimetsu-no-yaiba.png">
-                    <p class="name">Kimetsu no Yaiba</p>
-                </div>
-            </a>
-        </div>
         </div>
     </div>
-    </div>
+
     <div id="footer-container"></div>
 </body>
 </html>

@@ -1,0 +1,76 @@
+body {
+    background-color: #181818;
+    font-family: "Poetsen One", sans-serif;
+    margin: 0;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none; /* Quitar subrayado */
+    color: white; /* Cambiar color del texto */
+}
+
+.container {
+    width: 100%; /* Asegurarse de que el contenedor ocupe todo el ancho */
+    padding: 10px; /* Espacio alrededor del contenido */
+}
+
+.mangas {
+    color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinea desde la izquierda */
+    padding: 0 10px; /* Espaciado para no tocar los bordes */
+}
+
+.manga-list {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias filas */
+    gap: 15px; /* Espacio entre los elementos */
+}
+
+.manga {
+    background-color: #2c2c2c;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 130px; /* Tamaño reducido */
+    height: 200px; /* Ajustar altura proporcionalmente */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px; /* Espacio interior reducido */
+    box-sizing: border-box;
+}
+
+.manga a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.manga-image {
+    width: 100%;
+    height: 150px; /* Tamaño reducido de la imagen */
+    object-fit: cover;
+    border-radius: 5px; /* Borde redondeado más pequeño */
+}
+
+.name {
+    font-size: 12px; /* Tamaño del texto ajustado */
+    margin-top: 5px; /* Espacio entre imagen y título */
+}
+
+@media (max-width: 768px) {
+    .manga {
+        width: 100%;
+        max-width: 150px; /* Tamaño máximo ajustado para pantallas pequeñas */
+        height: auto;
+    }
+
+    .manga-image {
+        height: auto; /* Ajustar altura de imagen en pantallas pequeñas */
+    }
+}

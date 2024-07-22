@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 <a href="/search" class="search-button-header"><span class="material-symbols-outlined">search</span></a>
                 <a href="/manga" class="Manga">MANGA</a>
                 <a href="/anime" class="Anime">ANIME</a>
-                <a href="/profile" class="ProfileCircle" style="background-image: url('/static/img/profile-placeholder.jpg');"></a>
+                <a href="/profile" class="ProfileCircle" style="background-image: url('/static/img/profile.png');"></a>
             </div>
         </header>
     `;

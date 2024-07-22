@@ -40,11 +40,11 @@
       <div class="profile-header">
         <img
           id="profile-pic"
-          src="default-profile-pic.jpg"
+          src="/static/img/profile.png"
           alt="Foto de perfil"
           class="profile-pic"
         />
-        <h1 class="username">Nombre de Usuario</h1>
+        <h1 class="username">{{ username }}</h1>
       </div>
       <div class="actions">
         <form id="logout-form" action="/logout" method="POST">

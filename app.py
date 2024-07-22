@@ -1,4 +1,4 @@
-from flask import Flask, request, redirect, url_for, render_template, make_response
+from flask import Flask, request, redirect, url_for, render_template, make_response, session
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
 
@@ -19,6 +19,7 @@ def login():
         password = request.form['password']
         user = User.query.filter_by(username=username).first()
         if user and check_password_hash(user.password, password):
+            session['username'] = user.username  # Almacenar el nombre de usuario en la sesión
             resp = make_response(redirect(url_for('index')))
             resp.set_cookie('session', 'active')  # Puedes ajustar el valor de la cookie según sea necesario
             return resp
@@ -58,10 +59,12 @@ def anime():
 
 @app.route('/profile')
 def profile():
-    return render_template('pages/profile.html')
+    username = session.get('username', 'Nombre de Usuario')
+    return render_template('pages/profile.html', username=username)
 
 @app.route('/logout', methods=['POST'])
 def logout():
+    session.pop('username', None)  # Eliminar el nombre de usuario de la sesión
     resp = make_response(redirect('/login'))
     resp.set_cookie('session', '', expires=0)  # Elimina la cookie de sesión
     return resp

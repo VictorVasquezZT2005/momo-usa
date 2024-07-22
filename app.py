@@ -18,6 +18,10 @@ def home():
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
+    # Check if user is already logged in
+    if 'username' in session:
+        return redirect(url_for('index'))
+    
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
@@ -48,22 +52,32 @@ def register():
 
 @app.route('/index')
 def index():
+    if 'username' not in session:
+        return redirect(url_for('login'))
     return render_template('pages/index.html')
 
 @app.route('/search')
 def search():
+    if 'username' not in session:
+        return redirect(url_for('login'))
     return render_template('pages/search.html')
 
 @app.route('/manga')
 def manga():
+    if 'username' not in session:
+        return redirect(url_for('login'))
     return render_template('pages/manga.html')
 
 @app.route('/anime')
 def anime():
+    if 'username' not in session:
+        return redirect(url_for('login'))
     return render_template('pages/anime.html')
 
 @app.route('/profile')
 def profile():
+    if 'username' not in session:
+        return redirect(url_for('login'))
     username = session.get('username', 'Nombre de Usuario')
     return render_template('pages/profile.html', username=username)
 

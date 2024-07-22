@@ -5,6 +5,7 @@ body {
     margin: 0;
     padding: 10px;
     color: white;
+    overflow-x: hidden; /* Evita el desbordamiento horizontal */
 }
 
 /* Contenedor principal */
@@ -12,6 +13,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-x: hidden; /* Evita el desbordamiento horizontal */
 }
 
 /* Encabezado del perfil */
@@ -45,6 +47,7 @@ body {
     padding: 10px;
     border-radius: 10px;
     margin-top: 20px;
+    overflow-x: hidden; /* Evita el desbordamiento horizontal */
 }
 
 /* Estilos de Botones */
@@ -63,7 +66,6 @@ button {
     margin: 5px 0; /* Agrega margen entre los botones */
     text-align: center; /* Centra el texto dentro del botón */
 }
-
 button:hover {
     background-color: #0056b3; /* Azul oscuro en hover */
 }
@@ -89,11 +91,13 @@ button#donate:hover {
     .container {
         flex-wrap: wrap;
         justify-content: center;
+        padding: 0; /* Elimina el padding en pantallas pequeñas */
     }
 
     .actions {
         width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
         align-items: center;
+        padding: 10px; /* Asegura que haya un padding adecuado en pantallas pequeñas */
     }
 
     .actions button {

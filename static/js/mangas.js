@@ -2,11 +2,25 @@
 
 export const mangas = [
     {
-        title: "One Piece",
-        image: "/assets/img/one-piece.png",
-        link: "/pages/one-piece.html"
+        title: "Kimetsu no Yaiba",
+        image: "/static/img/kimetsu-no-yaiba-manga.png",
+        link: "/pages/kimetsu-no-yaiba.html"
     },
-    // Puedes agregar más mangas aquí
+    {
+        title: "Dragon Ball Super",
+        image: "/static/img/dragon-ball-super-manga.png",
+        link: "/pages/dragon-ball-super.html"
+    },
+    {
+        title: "Blue Lock",
+        image: "/static/img/blue-lock-manga.png",
+        link: "/pages/blue-lock.html"
+    },
+    {
+        title: "Jujutsu Kaisen",
+        image: "/static/img/jujutsu-kaisen-manga.png",
+        link: "/pages/jujutsu-kaisen.html"
+    }
 ];
 
 export function loadMangas() {

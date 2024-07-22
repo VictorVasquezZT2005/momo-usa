@@ -3,15 +3,24 @@
 export const animes = [
     {
         title: "Kimetsu no Yaiba",
-        image: "/assets/img/kimetsu-no-yaiba.png",
+        image: "/static/img/kimetsu-no-yaiba.png",
         link: "/pages/kimetsu-no-yaiba.html"
     },
     {
         title: "One Piece",
-        image: "/assets/img/one-piece.png",
+        image: "/static/img/one-piece.png",
         link: "/pages/one-piece.html"
     },
-    // Puedes agregar más animes aquí
+    {
+        title: "Kaiju No. 8",
+        image: "/static/img/kaiju-no.-8.png",
+        link: "/pages/kaiju-no-8.html"
+    },
+    {
+        title: "Dragon Ball Z",
+        image: "/static/img/dragon-ball-z.png",
+        link: "/pages/dragon-ball-z.html"
+    }
 ];
 
 export function loadAnimes() {

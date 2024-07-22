@@ -109,6 +109,10 @@ body {
     text-align: center;
 }
 
+.search-result a {
+    text-decoration: none; /* Eliminar subrayado de los enlaces */
+}
+
 @media (min-width: 768px) {
     .search-container {
         flex-direction: row;

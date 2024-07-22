@@ -66,6 +66,7 @@ button {
     margin: 5px 0; /* Agrega margen entre los botones */
     text-align: center; /* Centra el texto dentro del botón */
 }
+
 button:hover {
     background-color: #0056b3; /* Azul oscuro en hover */
 }
@@ -98,6 +99,7 @@ button#donate:hover {
         width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
         align-items: center;
         padding: 10px; /* Asegura que haya un padding adecuado en pantallas pequeñas */
+        box-sizing: border-box; /* Asegura que el padding no cause desbordamiento */
     }
 
     .actions button {

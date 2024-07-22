@@ -1,4 +1,4 @@
-from flask import Flask, request, redirect, url_for, render_template, make_response, session
+from flask import Flask, request, redirect, url_for, render_template, make_response, session, flash
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
 
@@ -12,6 +12,10 @@ class User(db.Model):
     username = db.Column(db.String(80), unique=True, nullable=False)
     password = db.Column(db.String(120), nullable=False)
 
+@app.route('/')
+def home():
+    return redirect(url_for('login'))
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
@@ -23,7 +27,7 @@ def login():
             resp = make_response(redirect(url_for('index')))
             resp.set_cookie('session', 'active')  # Puedes ajustar el valor de la cookie según sea necesario
             return resp
-        return 'Nombre de usuario o contraseña incorrectos'
+        flash('Nombre de usuario o contraseña incorrectos')  # Usa flash para mostrar mensajes de error
     return render_template('pages/login.html')
 
 @app.route('/register', methods=['GET', 'POST'])
@@ -38,7 +42,8 @@ def register():
             db.session.add(new_user)
             db.session.commit()
             return redirect(url_for('login'))
-        return 'Las contraseñas no coinciden'
+        else:
+            flash('Las contraseñas no coinciden')  # Usa flash para mostrar mensajes de error
     return render_template('pages/register.html')
 
 @app.route('/index')

@@ -38,7 +38,7 @@ body {
 /* Contenedor de Acciones */
 .actions {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column; /* Cambiado a columna para asegurar un solo botón por fila */
     align-items: center;
     width: 100%;
     max-width: 600px;
@@ -52,13 +52,15 @@ button {
     background-color: #007bff; /* Color de fondo azul */
     color: white;
     border: none;
-    padding: 10px;
+    padding: 10px 0; /* Ajusta el padding para igualar el tamaño de los botones */
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-    flex: 1; /* Asegura que los botones ocupen el mismo espacio */
-    margin: 0 5px; /* Agrega margen entre los botones */
+    width: 300px; /* Ancho fijo de 300 píxeles */
+    height: 50px; /* Altura fija de 50 píxeles */
+    box-sizing: border-box; /* Asegura que el padding y el border no aumenten el tamaño total del botón */
+    margin: 5px 0; /* Agrega margen entre los botones */
     text-align: center; /* Centra el texto dentro del botón */
 }
 
@@ -74,6 +76,14 @@ button#logout:hover {
     background-color: #cc0000; /* Rojo oscuro en hover */
 }
 
+button#donate {
+    background-color: #007bff; /* Azul para el botón de donación */
+}
+
+button#donate:hover {
+    background-color: #0056b3; /* Azul oscuro en hover */
+}
+
 /* Responsividad */
 @media (max-width: 768px) {
     .container {
@@ -82,15 +92,13 @@ button#logout:hover {
     }
 
     .actions {
-        flex-direction: column;
+        width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
         align-items: center;
-        width: 100%;
-        max-width: 100%;
     }
 
     .actions button {
-        width: 100%; /* Asegura que los botones ocupen todo el ancho disponible */
-        max-width: 300px; /* Limita el ancho máximo en pantallas más pequeñas */
+        width: 300px; /* Ancho fijo de 300 píxeles */
+        height: 50px; /* Altura fija de 50 píxeles */
         margin: 10px 0; /* Agrega margen superior e inferior a los botones */
     }
 }
@@ -106,7 +114,8 @@ button#logout:hover {
     }
 
     .actions button {
-        height: 50px;
+        width: 300px; /* Ancho fijo de 300 píxeles */
+        height: 50px; /* Altura fija de 50 píxeles */
         font-size: 14px;
         margin: 10px 0; /* Agrega margen superior e inferior a los botones */
     }

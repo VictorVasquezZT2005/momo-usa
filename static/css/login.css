@@ -91,3 +91,15 @@ a:hover {
   color: #ff6f6f; /* Color de mensaje en rojo claro */
   text-align: center;
 }
+
+.flash-messages {
+  margin-bottom: 20px;
+}
+.flash-message {
+  padding: 10px;
+  background-color: #f8d7da; /* Fondo rojo claro */
+  color: #721c24; /* Texto rojo oscuro */
+  border: 1px solid #f5c6cb; /* Borde rojo claro */
+  border-radius: 5px;
+  margin-bottom: 10px;
+}

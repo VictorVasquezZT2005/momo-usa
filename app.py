@@ -18,7 +18,6 @@ def home():
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    # Check if user is already logged in
     if 'username' in session:
         return redirect(url_for('index'))
     
@@ -27,11 +26,11 @@ def login():
         password = request.form['password']
         user = User.query.filter_by(username=username).first()
         if user and check_password_hash(user.password, password):
-            session['username'] = user.username  # Almacenar el nombre de usuario en la sesión
+            session['username'] = user.username
             resp = make_response(redirect(url_for('index')))
-            resp.set_cookie('session', 'active')  # Puedes ajustar el valor de la cookie según sea necesario
+            resp.set_cookie('session', 'active')
             return resp
-        flash('Nombre de usuario o contraseña incorrectos')  # Usa flash para mostrar mensajes de error
+        flash('Nombre de usuario o contraseña incorrectos')
     return render_template('pages/login.html')
 
 @app.route('/register', methods=['GET', 'POST'])
@@ -47,7 +46,7 @@ def register():
             db.session.commit()
             return redirect(url_for('login'))
         else:
-            flash('Las contraseñas no coinciden')  # Usa flash para mostrar mensajes de error
+            flash('Las contraseñas no coinciden')
     return render_template('pages/register.html')
 
 @app.route('/index')
@@ -74,6 +73,18 @@ def anime():
         return redirect(url_for('login'))
     return render_template('pages/anime.html')
 
+@app.route('/anime/<path:filename>')
+def anime_files(filename):
+    if 'username' not in session:
+        return redirect(url_for('login'))
+    return render_template(f'components/anime/{filename}')
+
+@app.route('/manga/<path:filename>')
+def manga_files(filename):
+    if 'username' not in session:
+        return redirect(url_for('login'))
+    return render_template(f'components/manga/{filename}')
+
 @app.route('/profile')
 def profile():
     if 'username' not in session:
@@ -83,12 +94,12 @@ def profile():
 
 @app.route('/logout', methods=['POST'])
 def logout():
-    session.pop('username', None)  # Eliminar el nombre de usuario de la sesión
+    session.pop('username', None)
     resp = make_response(redirect('/login'))
-    resp.set_cookie('session', '', expires=0)  # Elimina la cookie de sesión
+    resp.set_cookie('session', '', expires=0)
     return resp
 
 if __name__ == '__main__':
     with app.app_context():
-        db.create_all()  # Crea las tablas en la base de datos si no existen
+        db.create_all()
     app.run(debug=True)

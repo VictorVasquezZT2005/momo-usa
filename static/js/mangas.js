@@ -4,22 +4,22 @@ export const mangas = [
     {
         title: "Kimetsu no Yaiba",
         image: "/static/img/kimetsu-no-yaiba-manga.png",
-        link: "/pages/kimetsu-no-yaiba.html"
+        link: "/manga/kimetsu-no-yaiba.html"
     },
     {
         title: "Dragon Ball Super",
         image: "/static/img/dragon-ball-super-manga.png",
-        link: "/pages/dragon-ball-super.html"
+        link: "/manga/dragon-ball-super.html"
     },
     {
         title: "Blue Lock",
         image: "/static/img/blue-lock-manga.png",
-        link: "/pages/blue-lock.html"
+        link: "/manga/blue-lock.html"
     },
     {
         title: "Jujutsu Kaisen",
         image: "/static/img/jujutsu-kaisen-manga.png",
-        link: "/pages/jujutsu-kaisen.html"
+        link: "/manga/jujutsu-kaisen.html"
     }
 ];
 

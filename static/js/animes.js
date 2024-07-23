@@ -4,22 +4,22 @@ export const animes = [
     {
         title: "Kimetsu no Yaiba",
         image: "/static/img/kimetsu-no-yaiba.png",
-        link: "/pages/kimetsu-no-yaiba.html"
+        link: "/anime/kimetsu-no-yaiba.html"
     },
     {
         title: "One Piece",
         image: "/static/img/one-piece.png",
-        link: "/pages/one-piece.html"
+        link: "/anime/one-piece.html"
     },
     {
         title: "Kaiju No. 8",
         image: "/static/img/kaiju-no.-8.png",
-        link: "/pages/kaiju-no-8.html"
+        link: "/anime/kaiju-no-8.html"
     },
     {
         title: "Dragon Ball Z",
         image: "/static/img/dragon-ball-z.png",
-        link: "/pages/dragon-ball-z.html"
+        link: "/anime/dragon-ball-z.html"
     }
 ];
 

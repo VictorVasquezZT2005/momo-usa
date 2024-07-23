@@ -30,7 +30,6 @@ a {
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     white-space: nowrap;
-    animation: scroll 15s linear infinite; /* Anima el carrusel */
     border-radius: 10px;
 }
 
@@ -44,11 +43,14 @@ a {
     scrollbar-width: none;  /* Firefox */
 }
 
+.carousel a {
+    flex: 0 0 auto; /* Mantiene el ancho de los elementos hijos */
+    scroll-snap-align: center;
+}
+
 .carousel img {
-    flex: 0 0 auto;
     width: 100%;
     height: 460px;
-    scroll-snap-align: center;
     object-fit: cover;
     border-radius: 10px;
 }
@@ -144,10 +146,10 @@ a {
         scroll-snap-type: x mandatory;
         scroll-behavior: smooth;
         white-space: nowrap;
-        animation: scroll 15s linear infinite; /* Anima el carrusel */
         border-radius: 10px;
         width: 100%; /* Asegura que el carrusel ocupe todo el ancho disponible */
         max-width: 700px; /* Limita el ancho máximo del carrusel */
+        margin: auto; /* Centra el carrusel en la vista móvil */
     }
     
     /* Estilo para ocultar la barra de desplazamiento */
@@ -160,11 +162,13 @@ a {
         scrollbar-width: none;  /* Firefox */
     }
     
+    .carousel a {
+        flex: 0 0 auto; /* Mantiene el ancho de los elementos hijos */
+    }
+    
     .carousel img {
-        flex: 0 0 auto;
-        width: 100%;
-        height: auto; /* Ajusta la altura automáticamente para mantener las proporciones */
-        scroll-snap-align: center;
+        width: 100%; /* Asegura que la imagen ocupe todo el ancho disponible */
+        max-height: 300px; /* Ajusta la altura máxima para evitar que la imagen se agrande demasiado */
         object-fit: cover;
         border-radius: 10px;
     }
@@ -219,5 +223,4 @@ a {
         margin-top: 10px; /* Espacio entre imagen y título */
         text-align: center; /* Asegura que el texto esté centrado */
     }
-    
 }

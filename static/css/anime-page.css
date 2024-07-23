@@ -33,6 +33,36 @@ a:hover {
     background-color: #0056b3;
 }
 
+/* Sección de Portada del Anime */
+
+#anime-cover-section {
+    background-color: #2c2c2c;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.anime-cover img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.anime-details {
+    color: white;
+    margin-top: 10px;
+}
+
+.anime-details h1 {
+    font-size: 2em;
+    margin: 0;
+}
+
+.anime-details p {
+    font-size: 1.2em;
+}
+
 /* Sección de Temporadas */
 
 #seasons-section {

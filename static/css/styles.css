@@ -168,7 +168,7 @@ a {
     
     .carousel img {
         width: 100%; /* Asegura que la imagen ocupe todo el ancho disponible */
-        max-height: 300px; /* Ajusta la altura máxima para evitar que la imagen se agrande demasiado */
+        max-height: 217.44px; /* Ajusta la altura máxima para evitar que la imagen se agrande demasiado */
         object-fit: cover;
         border-radius: 10px;
     }

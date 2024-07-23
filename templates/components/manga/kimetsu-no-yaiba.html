@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="/static/css/manga-page.css" />
     <link rel="stylesheet" href="/static/css/header.css" />
     <link rel="stylesheet" href="/static/css/footer.css" />
-    <!-- Icono de la página -->
-    <link rel="icon" href="/static/icon/icon.ico" type="image/x-icon" />
     <!-- JavaScript -->
     <script src="/static/js/header.js" defer></script>
     <script src="/static/js/footer.js" defer></script>
-    <script src="/static/js/animes.js" type="module" defer></script>
+    <script src="/static/js/tomos.js" defer></script>
+    <!-- Icono de la página -->
+    <link rel="icon" href="/static/icon/icon.ico" type="image/x-icon" />
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -35,6 +35,53 @@
   </head>
   <body>
     <div id="header-container"></div>
+
+    <!-- Sección de Portada del Manga -->
+    <section id="manga-cover-section">
+      <div class="manga-cover">
+        <img
+          src="/static/img/kimetsu-no-yaiba-manga.png"
+          alt="Portada del Manga"
+        />
+      </div>
+      <div class="manga-details">
+        <h1>Kimetsu no Yaiba</h1>
+        <p>
+          Kimetsu no Yaiba sigue la historia de Tanjiro Kamado, un joven que
+          vive en un mundo donde los demonios acechan en la oscuridad. Después
+          de que su familia es asesinada por un demonio y su hermana Nezuko se
+          convierte en una, Tanjiro se embarca en una peligrosa misión para
+          convertirla de nuevo en humana y vengar la muerte de su familia.
+          Entrenando con la Cuerpo de Exterminio de Demonios, enfrentará feroces
+          adversarios y descubrirá secretos ocultos mientras lucha por su
+          objetivo.
+        </p>
+      </div>
+    </section>
+
+    <!-- Sección de Tomos del Manga -->
+    <section id="manga-volumes-section">
+      <h2>Tomos</h2>
+      <div class="volume-list">
+        <div class="volume-item">
+          <h3>Tomos 1 al 7</h3>
+          <p>Fecha de lanzamiento: Variada</p>
+          <a href="#" class="btn" id="view-pdf">Ver Tomos 1 al 7</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección del PDF -->
+    <section id="pdf-viewer-section" class="hidden">
+      <button class="btn" id="back-to-volumes">Volver a Tomos</button>
+      <iframe
+        id="pdf-viewer"
+        src="https://drive.google.com/file/d/1-LkNSDDQfES-qYBP8ZJQgMGJGMkTyCf5/preview"
+        frameborder="0"
+        width="100%"
+        height="600"
+      ></iframe>
+    </section>
     <div id="footer-container"></div>
   </body>
 </html>

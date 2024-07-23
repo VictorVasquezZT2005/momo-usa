@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="/static/css/manga-page.css" />
     <link rel="stylesheet" href="/static/css/header.css" />
     <link rel="stylesheet" href="/static/css/footer.css" />
-    <!-- Icono de la página -->
-    <link rel="icon" href="/static/icon/icon.ico" type="image/x-icon" />
     <!-- JavaScript -->
     <script src="/static/js/header.js" defer></script>
     <script src="/static/js/footer.js" defer></script>
-    <script src="/static/js/animes.js" type="module" defer></script>
+    <script src="/static/js/tomos.js" defer></script>
+    <!-- Icono de la página -->
+    <link rel="icon" href="/static/icon/icon.ico" type="image/x-icon" />
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -35,6 +35,49 @@
   </head>
   <body>
     <div id="header-container"></div>
+
+    <!-- Sección de Portada del Manga -->
+    <section id="manga-cover-section">
+      <div class="manga-cover">
+        <img src="/static/img/blue-lock-manga.png" alt="Portada del Manga" />
+      </div>
+      <div class="manga-details">
+        <h1>Blue Lock</h1>
+        <p>
+          Blue Lock sigue a Yoichi Isagi, un futbolista japonés que entra en un
+          competitivo programa llamado Blue Lock. El objetivo es encontrar al
+          mejor delantero del país a través de una serie de desafíos extremos.
+          Los jugadores deben superar a sus rivales y desarrollar un egoísmo
+          competitivo para destacarse y convertirse en la estrella del fútbol
+          japonés. La serie mezcla acción y drama en un entorno futbolístico
+          intenso.
+        </p>
+      </div>
+    </section>
+
+    <!-- Sección de Tomos del Manga -->
+    <section id="manga-volumes-section">
+      <h2>Tomos</h2>
+      <div class="volume-list">
+        <div class="volume-item">
+          <h3>Tomos 1 al 7</h3>
+          <p>Fecha de lanzamiento: Variada</p>
+          <a href="#" class="btn" id="view-pdf">Ver Tomos 1 al 7</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección del PDF -->
+    <section id="pdf-viewer-section" class="hidden">
+      <button class="btn" id="back-to-volumes">Volver a Tomos</button>
+      <iframe
+        id="pdf-viewer"
+        src="https://drive.google.com/file/d/1-LkNSDDQfES-qYBP8ZJQgMGJGMkTyCf5/preview"
+        frameborder="0"
+        width="100%"
+        height="600"
+      ></iframe>
+    </section>
     <div id="footer-container"></div>
   </body>
 </html>

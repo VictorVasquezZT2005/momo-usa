@@ -8,11 +8,12 @@
     <link rel="stylesheet" href="/static/css/anime-page.css" />
     <link rel="stylesheet" href="/static/css/header.css" />
     <link rel="stylesheet" href="/static/css/footer.css" />
-    <!-- Icono de la página -->
-    <link rel="icon" href="/static/icon/icon.ico" type="image/x-icon" />
     <!-- JavaScript -->
     <script src="/static/js/header.js" defer></script>
     <script src="/static/js/footer.js" defer></script>
+    <script src="/static/js/episodes.js" defer></script>
+    <!-- Icono de la página -->
+    <link rel="icon" href="/static/icon/icon.ico" type="image/x-icon" />
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -34,6 +35,86 @@
   </head>
   <body>
     <div id="header-container"></div>
+
+    <!-- Sección de Portada del Anime -->
+    <section id="anime-cover-section">
+      <div class="anime-cover">
+        <img src="/static/img/dragon-ball-z.png" alt="Portada del Anime" />
+      </div>
+      <div class="anime-details">
+        <h1>Dragon Ball Z</h1>
+        <p>
+          Dragon Ball Z sigue las aventuras de Goku, un guerrero Saiyan que
+          protege la Tierra de poderosos enemigos. A medida que se enfrenta a
+          amenazas como los Saiyan invasores, los guerreros del espacio y los
+          androides, Goku y sus amigos exploran nuevos niveles de poder y
+          defienden el planeta con intensas batallas y entrenamiento. La serie
+          es famosa por sus épicas peleas, transformaciones y momentos de acción
+          desbordante.
+        </p>
+      </div>
+    </section>
+
+    <!-- Sección de Temporadas -->
+    <section id="seasons-section">
+      <h2>Temporadas</h2>
+      <div class="season-list">
+        <!-- Ejemplo de temporada -->
+        <div class="season-item">
+          <h3>Temporada 1</h3>
+          <p>Descripción breve de la Temporada 1.</p>
+          <a href="javascript:void(0);" class="btn" onclick="showEpisodes()"
+            >Ver Episodios</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de Capítulos -->
+    <section id="episodes-section" class="hidden">
+      <h2>Capítulos</h2>
+      <button class="btn back-to-seasons" onclick="showSeasons()">
+        Volver a Temporadas
+      </button>
+      <div class="episode-list">
+        <!-- Ejemplos de capítulos -->
+        <div class="episode-item">
+          <h3>Capítulo 1</h3>
+          <p>Descripción breve del Capítulo 1.</p>
+          <a
+            href="javascript:void(0);"
+            class="btn"
+            onclick="showPlayer('video1')"
+            >Ver Capítulo</a
+          >
+          <div id="video1" class="video-container hidden">
+            <iframe
+              src="https://drive.google.com/file/d/1-3ZvSzetlfFmOkC4drpn6aZ4ZqMjScG0/preview"
+              allow="autoplay; fullscreen"
+              frameborder="0"
+            ></iframe>
+          </div>
+        </div>
+        <div class="episode-item">
+          <h3>Capítulo 2</h3>
+          <p>Descripción breve del Capítulo 2.</p>
+          <a
+            href="javascript:void(0);"
+            class="btn"
+            onclick="showPlayer('video2')"
+            >Ver Capítulo</a
+          >
+          <div id="video2" class="video-container hidden">
+            <iframe
+              src="https://drive.google.com/file/d/1-3_n7qJgyirLdzkdqI0icijZ0H-bBVJA/preview"
+              allow="autoplay; fullscreen"
+              frameborder="0"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <div id="footer-container"></div>
   </body>
 </html>

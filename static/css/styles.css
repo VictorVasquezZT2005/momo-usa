@@ -31,16 +31,26 @@ a {
     scroll-behavior: smooth;
     white-space: nowrap;
     border-radius: 10px;
+    width: 100%; /* Asegura que el carrusel ocupe todo el ancho disponible */
+    max-width: 700px; /* Limita el ancho máximo del carrusel */
+    margin: auto; /* Centra el carrusel en la vista móvil */
+    opacity: 0; /* Inicialmente oculto */
+    transform: translateY(20px); /* Desplazado hacia abajo */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Animaciones de transición */
 }
 
-/* Estilo para ocultar la barra de desplazamiento */
+.carousel.visible {
+    opacity: 1; /* Visible */
+    transform: translateY(0); /* Alineado en su posición original */
+}
+
 .carousel::-webkit-scrollbar {
-    display: none;
+    display: none; /* Oculta la barra de desplazamiento en WebKit */
 }
 
 .carousel {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
 }
 
 .carousel a {
@@ -53,6 +63,12 @@ a {
     height: 460px;
     object-fit: cover;
     border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animaciones de transición */
+}
+
+.carousel img:hover {
+    transform: scale(1.05); /* Escala ligeramente la imagen al pasar el ratón */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Añade una sombra al pasar el ratón */
 }
 
 .content {
@@ -76,6 +92,24 @@ a {
     padding: 5px; /* Espacio interior reducido */
     box-sizing: border-box;
     margin-bottom: 15px; /* Espacio entre los elementos */
+    opacity: 0; /* Inicialmente oculto */
+    transform: translateY(20px); /* Desplazado hacia abajo */
+    transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.3s ease; /* Animaciones de transición */
+}
+
+.item.visible {
+    opacity: 1; /* Visible */
+    transform: translateY(0); /* Alineado en su posición original */
+}
+
+.item:hover {
+    transform: scale(1.05); /* Escala ligeramente el elemento al pasar el ratón */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Añade una sombra al pasar el ratón */
+}
+
+.item:active {
+    transform: scale(0.98); /* Escala el elemento ligeramente al hacer clic */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Sombra más sutil al hacer clic */
 }
 
 .item a {
@@ -84,6 +118,11 @@ a {
     align-items: center;
     color: white;
     text-align: center;
+    transition: color 0.3s ease; /* Animación de transición para el color del texto */
+}
+
+.item a:hover {
+    color: white; /* El texto sigue siendo blanco al pasar el ratón */
 }
 
 .image-item {
@@ -91,6 +130,11 @@ a {
     height: 150px; /* Tamaño reducido de la imagen */
     object-fit: cover;
     border-radius: 5px; /* Borde redondeado más pequeño */
+    transition: transform 0.3s ease; /* Animación de transición para la imagen */
+}
+
+.item:hover .image-item {
+    transform: scale(1.1); /* Escala la imagen al pasar el ratón */
 }
 
 .title {
@@ -103,124 +147,44 @@ a {
     margin-top: 5px; /* Espacio entre imagen y título */
 }
 
-.Rectangle1 {
-    width: 100%;
-    height: 60px;
-    background-color: #333333; /* Color de fondo */
-    border-radius: 10px;
+/* Estilo para la animación del carrusel */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.carousel {
+    animation: fadeInUp 1s forwards; /* Aplica la animación al carrusel */
 }
 
 @media (max-width: 768px) {
-    body {
-        background-color: #181818;
-        font-family: "Poetsen One", sans-serif;
-        margin: 0;
-        padding: 10px;
-    }
-    
-    a {
-        text-decoration: none; /* Quitar subrayado */
-        color: white; /* Cambiar color del texto */
-    }
-    
-    .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        flex-wrap: wrap;
-        justify-content: center; /* Centra los elementos en la vista móvil */
-    }
-    
-    .row {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 15px;
-        margin-bottom: 2px; /* Espacio entre filas */
-        justify-content: center; /* Centra los elementos en la vista móvil */
-    }
-    
     .carousel {
-        display: flex;
-        align-items: center;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        scroll-behavior: smooth;
-        white-space: nowrap;
-        border-radius: 10px;
         width: 100%; /* Asegura que el carrusel ocupe todo el ancho disponible */
         max-width: 700px; /* Limita el ancho máximo del carrusel */
         margin: auto; /* Centra el carrusel en la vista móvil */
     }
     
-    /* Estilo para ocultar la barra de desplazamiento */
-    .carousel::-webkit-scrollbar {
-        display: none;
-    }
-    
-    .carousel {
-        -ms-overflow-style: none;  /* IE and Edge */
-        scrollbar-width: none;  /* Firefox */
-    }
-    
-    .carousel a {
-        flex: 0 0 auto; /* Mantiene el ancho de los elementos hijos */
-    }
-    
     .carousel img {
-        width: 100%; /* Asegura que la imagen ocupe todo el ancho disponible */
         max-height: 217.44px; /* Ajusta la altura máxima para evitar que la imagen se agrande demasiado */
-        object-fit: cover;
-        border-radius: 10px;
-    }
-    
-    .content {
-        width: 100%; /* Asegura que el contenido ocupe todo el ancho disponible */
-        max-width: 587px; /* Limita el ancho máximo del contenido */
-        height: auto; /* Ajusta la altura automáticamente */
-        color: white;
-        align-self: flex-start;
-        margin-bottom: 5px;
-        margin: auto;
     }
     
     .item {
-        background-color: #2c2c2c;
-        border-radius: 10px;
-        overflow: hidden;
         width: 150px; /* Tamaño ajustado */
         height: auto; /* Ajustar altura automáticamente */
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* Centra los elementos horizontalmente */
-        justify-content: center; /* Centra los elementos verticalmente */
         padding: 10px; /* Espacio interior ajustado */
-        box-sizing: border-box;
-    }
-    
-    .item a {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        color: white;
-        text-align: center;
     }
     
     .image-item {
-        width: 100%;
-        height: 200px; /* Tamaño ajustado de la imagen */
-        object-fit: cover;
-        border-radius: 10px; /* Borde redondeado ajustado */
-    }
-    
-    .title {
-        color: white;
-        font-size: 16px; /* Tamaño del texto ajustado */
-        margin: 0; /* Elimina márgenes para centrar correctamente */
+        height: auto; /* Ajusta la altura automáticamente */
     }
     
     .name {
         font-size: 14px; /* Tamaño del texto ajustado */
-        margin-top: 10px; /* Espacio entre imagen y título */
-        text-align: center; /* Asegura que el texto esté centrado */
     }
 }

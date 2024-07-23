@@ -1,5 +1,4 @@
 /* Estilos generales */
-
 body {
     background-color: #181818;
     font-family: 'Poetsen One', sans-serif;
@@ -34,7 +33,6 @@ a:hover {
 }
 
 /* Sección de Portada del Anime */
-
 #anime-cover-section {
     background-color: #2c2c2c;
     padding: 20px;
@@ -64,7 +62,6 @@ a:hover {
 }
 
 /* Sección de Temporadas */
-
 #seasons-section {
     background-color: #2c2c2c;
     padding: 20px;
@@ -90,7 +87,6 @@ a:hover {
 }
 
 /* Sección de Capítulos */
-
 #episodes-section {
     background-color: #2c2c2c;
     padding: 20px;
@@ -100,7 +96,7 @@ a:hover {
 
 #episodes-section h2 {
     color: white;
-    margin-top: 0;
+    margin-top: 40px; /* Añadir margen superior adicional para evitar la superposición */
 }
 
 .episode-list {
@@ -118,28 +114,72 @@ a:hover {
 
 .video-container {
     margin-top: 10px;
+    position: relative; /* Para mantener el aspecto responsivo del video */
+    width: 100%;
+    padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+    height: 0;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px; /* Borde redondeado opcional */
 }
 
 /* Botón "Volver a Temporadas" */
-
 .back-to-seasons {
-    position: absolute;
-    top: 20px; /* Ajusta según sea necesario */
-    left: 20px; /* Ajusta según sea necesario */
+    display: inline-block; /* Asegurar que el botón esté dentro del flujo de la página */
     margin-bottom: 20px; /* Espacio debajo del botón */
     background-color: #0056b3; /* Cambia el color si quieres un estilo diferente */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
 }
 
 /* Ocultar elementos */
-
 .hidden {
     display: none;
 }
 
-/* Estilo para los videos */
+/* Estilos para pantallas anchas */
+@media (min-width: 768px) {
+    #anime-cover-section {
+        display: flex;
+        align-items: flex-start; /* Alinear al inicio del contenedor */
+        justify-content: flex-start; /* Alinear los elementos al inicio del contenedor */
+        text-align: left; /* Alinear texto a la izquierda */
+    }
 
-video {
-    border-radius: 8px; /* Borde redondeado opcional */
-    max-width: 100%; /* Asegura que el video no exceda el ancho del contenedor */
-    height: auto; /* Mantiene la proporción del video */
+    .anime-cover {
+        flex: 0 0 auto; /* No permitir que la imagen crezca o se encoja */
+        margin-right: 20px; /* Espacio entre la imagen y los detalles */
+    }
+
+    .anime-cover img {
+        max-width: 200px; /* Reducir tamaño de la imagen en pantallas anchas */
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .anime-details {
+        flex: 1 1 auto; /* Permitir que los detalles crezcan */
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Centrar verticalmente el contenido */
+    }
+
+    .anime-details h1 {
+        font-size: 2.5em; /* Aumentar tamaño de la fuente */
+        margin: 0; /* Eliminar margen superior para alinear el nombre arriba */
+    }
+
+    .anime-details p {
+        font-size: 1.5em; /* Aumentar tamaño de la fuente */
+        margin: 10px 0; /* Reducir el margen entre los elementos */
+    }
 }
